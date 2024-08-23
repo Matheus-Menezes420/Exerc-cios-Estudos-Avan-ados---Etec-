@@ -13,7 +13,7 @@ scanf("%f",&C);
 delta=((BB)-4AC);
 if (delta<0)
 {
-printf("não há raízes reais para delta");
+printf("nÃ£o hÃ¡ raÃ­zes reais para delta");
 }
 if (delta==0)
 {
@@ -24,6 +24,6 @@ if (delta>0)
 {
 x1=((-B+(sqrt(delta)))/2A);
 x2=((-B-(sqrt(delta)))/2A);
-printf("Existe duas raízes para delta,\n x1=%f \n x2=%f",x1,x2);
+printf("Existe duas raÃ­zes para delta,\n x1=%f \n x2=%f",x1,x2);
 }
 }
