@@ -6,7 +6,7 @@ while (x>0)
 {
 printf("Digite um valor: ");
 scanf("%d",&x);
-if (x>0)y+=x;
+if (x>=0)y+=x;
 contador++;
 z=y/contador;
 }
