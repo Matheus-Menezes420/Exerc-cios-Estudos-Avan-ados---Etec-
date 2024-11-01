@@ -1,0 +1,12 @@
+#include <stdio.h>
+void main()
+{
+    int VetA[20],VetB[20],i,j;
+    for (i=-20;i<0;i++)
+    {
+
+        VetA[i]=i;
+        VetB[i]=i*(-1);
+        printf("%d\n",VetB[i]);
+    }
+}
