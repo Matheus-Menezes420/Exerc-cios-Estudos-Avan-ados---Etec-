@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int buscasequencial(int VetB[], int tamanho, int chave) {
+    for (int j = 0; j < tamanho; j++) {
+        if (VetB[j] == chave) {
+            return j;
+        }
+    }
+    return -1;
+}
+int main() {
+    int VetA[30], VetB[30], i, chave;
+    for (i = 0; i < 30; i++) {
+        VetA[i]=i;
+        VetB[i]=(i*i*i);
+        printf("%d\n", VetB[i]);
+    }
+    printf("\n");
+    printf("Digite o numero do elemento para o programa realizar a busca: ");
+    scanf("%d", &chave);
+    int tamanho = sizeof(VetB) / sizeof(VetB[0]);
+    int resultado = buscasequencial(VetB, tamanho, chave);
+    if (resultado != -1) {
+        printf("Elemento encontrado na posição: %d\n", resultado);
+    } else {
+        printf("Elemento nao encontrado.\n");
+    }
+    return 0;
+}
