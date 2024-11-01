@@ -1,0 +1,39 @@
+#include <stdio.h>
+int pesquisaBinaria(int arr[], int tamanho, int chave) {
+    int esquerda = 0;
+    int direita = tamanho - 1;
+
+    while (esquerda <= direita) {
+        int meio = esquerda + (direita - esquerda) / 2;
+
+        if (arr[meio] == chave) {
+            return meio;
+        }
+        if (arr[meio] < chave) {
+            esquerda = meio + 1;
+        } else {
+            direita = meio - 1;
+        }
+    }
+    return -1;
+}
+int main() {
+    int VetA[15], VetB[15], VetC[15], VetD[15], i;
+    for (i = 0; i < 15; i++) {
+        VetA[i] = i;
+        VetB[i] = i + 1;
+        VetC[i] = i + 2;
+        VetD[i] = VetA[i] + VetB[i] + VetC[i];
+        printf("%d\n", VetD[i]);
+    }
+    int chave;
+    printf("Digite um número para realizar a busca binaria: ");
+    scanf("%d", &chave);
+    int resultado = pesquisaBinaria(VetD, 15, chave);
+    if (resultado != -1) {
+        printf("Elemento %d encontrado na posição: %d\n", chave, resultado);
+    } else {
+        printf("Elemento %d não encontrado.\n", chave);
+    }
+    return 0;
+}
