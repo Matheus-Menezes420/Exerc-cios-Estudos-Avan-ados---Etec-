@@ -1,0 +1,17 @@
+#include <stdio.h>
+void main()
+{
+int VetA[7],VetB[7],MatC[7][2],i,j;
+for (i=0;i<7;i++)
+{
+VetA[i]=i;
+VetB[i]=i+7;
+MatC[i][0]=VetA[i];
+MatC[i][1]=VetB[i];
+}
+for (i=0;i<7;i++)
+{
+for (j=0;j<2;j++)printf("%d ",MatC[i][j]);
+printf("\n");
+}
+}
