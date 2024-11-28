@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void main() {
+    int VetA[10], MatC[10][3], i, j, resultado;
+    for (i = 0; i < 10; i++) {
+        VetA[i] = i;               
+        MatC[i][0] = VetA[i] + 5;  
+        MatC[i][2] = VetA[i] * VetA[i]; 
+        resultado = 1; 
+        for (j = 1; j <= VetA[i]; j++) { 
+            resultado *= j;
+        }
+        MatC[i][1] = resultado; 
+    }
+    printf("Valores da Matriz MatC:\n");
+    for (i = 0; i < 10; i++) {
+        printf("%d %d %d\n", MatC[i][0], MatC[i][1], MatC[i][2]);
+    }
+}
