@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+void main() {
+    float VetA[12], VetB[12], MatC[12][2];
+    int i, j;
+    for (i = 0; i < 12; i++) {
+        VetA[i] = i;                
+        MatC[i][0] = VetA[i] * 2;   
+    }
+    for (i = 0; i < 12; i++) {
+        VetB[i] = i + 12;           
+        MatC[i][1] = VetB[i] - 5;
+    }
+    printf("Valores da Matriz MatC:\n");
+    for (i = 0; i < 12; i++) {
+        for (j = 0; j < 2; j++) {
+            printf("%.2f ", MatC[i][j]); // Formato de ponto flutuante com 2 casas decimais
+        }
+        printf("\n");
+    }
+}
