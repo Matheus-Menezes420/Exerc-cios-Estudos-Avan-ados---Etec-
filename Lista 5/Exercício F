@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void main() {
+    int MatA[5][4], MatB[5][4];
+    int i, j, k, resultado;
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("Digite o valor do elemento [%d][%d]: ", j, i);
+            scanf("%d", &MatA[j][i]);
+            resultado = 1; 
+            for (k = 1; k <= MatA[j][i]; k++) {
+                resultado *= k;
+            }
+            MatB[j][i] = resultado; 
+        }
+    }
+    printf("\nMatriz MatA:\n");
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("%d ", MatA[j][i]);
+        }
+        printf("\n");
+    }
+    printf("\nMatriz MatB (fatoriais de MatA):\n");
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("%d ", MatB[j][i]);
+        }
+        printf("\n");
+    }
+}
