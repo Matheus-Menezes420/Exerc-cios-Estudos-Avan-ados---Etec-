@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void main() {
+    int MatA[4][5], MatB[4][5],i,j;
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 4; j++) {
+            printf("Digite o valor do elemento [%d][%d]: ", j, i);
+            scanf("%d", &MatA[j][i]);
+            MatB[j][i]=(MatA[j][i]*1.8)+32;
+        }
+    }
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 4; j++) {
+            printf("°C: %d - °F: %d ",MatA[j][i],MatB[j][i]);
+            printf("\n");
+        }
+    }
+}
