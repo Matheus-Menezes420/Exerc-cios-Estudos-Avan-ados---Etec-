@@ -1,0 +1,39 @@
+#include<stdio.h>
+void main()
+#define Linhas 5
+#define Colunas 3
+{
+    int MatA[Linhas][Colunas],MatB[Linhas][Colunas],MatC[Linhas][Colunas],i,j;
+    printf("Digite os elementos da matriz A: ",Linhas,Colunas);
+    for (i=0; i<Linhas; i++)
+    {
+        for (j=0; j<Colunas; j++)
+        {
+            printf("MatA[i][j]: ",i,j);
+            scanf("%d",&MatA[i][j]);
+        }
+    }
+    printf("Digite os elementos da matriz B:",Linhas,Colunas);
+    for (i=0; i<Linhas; i++)
+    {
+        for (j=0; j<Colunas; j++)
+        {
+            printf("MatB[i][j]: ",i,j);d o
+            scanf("%d",&MatB[i][j]);
+        }
+    }
+    for (i=0; i<Linhas; i++)
+    {
+        for (j=0; j<Colunas; j++)
+        {
+            MatC[i][j]=MatA[i][j]+MatB[i][j];
+        }
+    }
+    printf("\nMatriz C (soma de A e B):\n");
+    for (int i = 0; i < Linhas; i++) {
+        for (int j = 0; j < Colunas; j++) {
+            printf("%d ", MatC[i][j]);
+        }
+        printf("\n");
+    }
+}
