@@ -1,0 +1,50 @@
+#include <stdio.h>
+int somatorioForaDiagonal(int matriz[7][7]) {
+    int soma = 0;
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            if (i != j) { 
+                soma += matriz[i][j];
+            }
+        }
+    }
+    return soma;
+}
+int fatorial(int n) {
+    int fat = 1;
+    for (int i = 1; i <= n; i++) {
+        fat *= i;
+    }
+    return fat;
+}
+void main() {
+    int MatA[7][7], MatB[7][7],i,j;
+    for (i = 0; i < 7; i++) {
+        for (j = 0; j < 7; j++) {
+            printf("Digite o valor do elemento [%d][%d]: ", j+1, i+1);
+            scanf("%d", &MatA[j][i]);
+            if (i == j) { 
+                MatB[i][j] = fatorial(MatA[i][j]);
+            } else { 
+                MatB[i][j] = MatA[i][j] - 1;
+            }
+        }
+    }
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            printf("%d ", MatA[i][j]);
+        }
+        printf("\n");
+    }
+    for (int i = 0; i < 7; i++) {
+        for (int j = 0; j < 7; j++) {
+            printf("%d ", MatB[i][j]);
+        }
+        printf("\n");
+    }
+    int somaForaDiagonal = somatorioForaDiagonal(MatA);
+    printf("\nSomatório dos elementos fora da diagonal principal da matriz A: %d\n", somaForaDiagonal);
+}
+
+
+    
