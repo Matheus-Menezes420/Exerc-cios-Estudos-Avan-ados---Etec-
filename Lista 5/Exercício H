@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void main() {
+    int MatA[5][5], MatB[5][5],i,j;
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("Digite o valor do elemento [%d][%d]: ", j, i);
+            scanf("%d", &MatA[j][i]);
+            if (j==i){
+            MatB[j][i]=(MatA[j][i]*3);
+            }
+            else{
+            MatB[j][i]=(MatA[j][i]*2);
+            }
+        }
+    }
+    for (i = 0; i < 5; i++) {
+        for (j = 0; j < 5; j++) {
+            printf("Elementos da matriz B: %d ", MatB[j][i]);
+            printf("\n");
+        }
+    }
+}
